@@ -1,7 +1,7 @@
 {
     "required_api_version": "^2.0.0",
-    "name": "Enpass",
-    "description": "Encrypt text to PHP hashed password",
+    "name": "UUID",
+    "description": "Generating UUID easily everywhere without internet",
     "developer_name": "Ayub Aswad",
     "icon": "images/icon.png",
     "options": {
@@ -9,10 +9,10 @@
     },
     "preferences": [
         {
-            "id": "enpass_kw",
+            "id": "uuid_kw",
             "type": "keyword",
-            "name": "Enpass",
-            "default_value": "enpass"
+            "name": "UUID",
+            "default_value": "uuid"
         }
     ]
 }
