@@ -3,7 +3,7 @@
 > [Ulauncher](https://ulauncher.io/) Extension for generating UUID
 
 ## Screenshots
-TBD
+![media1](preview.gif)
 
 ## Requirements
 
@@ -29,8 +29,9 @@ ln -s <repo_location> ulauncher-uuid
 To see your changes, stop ulauncher and run it from the command line with: ```ulauncher -v```.
 
 ## Todos
-- [ ] Add gif preview (or screenshot)
+- [x] Add gif preview (or screenshot)
 - [ ] Add more namespaces for uuid v3 and v5
+- [ ] Optimize gif preview to smaller size
 - [ ] Add different icon for each uuid version 
 
 ## License 
