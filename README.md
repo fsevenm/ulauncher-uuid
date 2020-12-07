@@ -43,4 +43,4 @@ When you made any changes to `main.py` or the other assets, you need to re-run d
 
 ## License 
 
-MIT
+MIT @ Ayub Aswad
