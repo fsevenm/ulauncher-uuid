@@ -1,6 +1,6 @@
-# Ulaucher UUID
+# Ulauncher UUID
 
-> [ulauncher](https://ulauncher.io/) Extension for generating UUID
+> [Ulauncher](https://ulauncher.io/) Extension for generating UUID
 
 ## Screenshots
 TBD
