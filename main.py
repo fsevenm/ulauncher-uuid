@@ -24,17 +24,26 @@ class KeywordQueryEventListener(EventListener):
         items = []
         generated_uuids = []
         accepted_versions = ["v1", "v3", "v4", "v5"]
-
-        args_string = event.get_argument()
-        args = args_string.split(' ')  # [0]v5 [1]name
+        args = None
         v = "v4"
         name = "python.org"
 
-        if args[0] is not None and args[0] in accepted_versions:
-            v = args[0]
+        args_string = event.get_argument()
 
-        if args[1] is not None:
-            name = args[1]
+        if args_string is not None:
+            args = args_string.split(' ')  # [0]v5 [1]name
+
+        try:
+            if args is not None and args[0] in accepted_versions:
+                v = args[0]
+        except IndexError:
+            pass
+
+        try:
+            if args is not None and args[1] is not None:
+                name = args[1]
+        except IndexError:
+            pass
 
         if v == "v1":
             generated_uuids.append(["UUID v1", str(uuid.uuid1())])
@@ -59,3 +68,5 @@ class KeywordQueryEventListener(EventListener):
 
 if __name__ == '__main__':
     UuidExtension().run()
+
+
