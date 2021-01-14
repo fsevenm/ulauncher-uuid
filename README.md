@@ -38,7 +38,7 @@ When you made any changes to `main.py` or the other assets, you need to re-run d
 ## Todos
 - [x] Add gif preview (or screenshot)
 - [ ] Add more namespaces for uuid v3 and v5
-- [ ] Optimize gif preview to smaller size
+- [x] Optimize gif preview to smaller size
 - [ ] Add different icon for each uuid version 
 
 ## License 
