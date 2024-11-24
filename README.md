@@ -9,7 +9,7 @@
 
 * [ulauncher](https://ulauncher.io/)
 * Python >= 2.7
-* uuid (`pip install uuid`)
+* uuid (`pip install uuid`) and (`pip install uuid7`)
 
 ## Install
 
