@@ -1,5 +1,6 @@
 import logging
 import uuid
+from uuid_extensions import uuid7str
 from ulauncher.api.client.Extension import Extension
 from ulauncher.api.client.EventListener import EventListener
 from ulauncher.api.shared.event import KeywordQueryEvent
@@ -23,7 +24,7 @@ class KeywordQueryEventListener(EventListener):
     def on_event(self, event, extension):
         items = []
         generated_uuids = []
-        accepted_versions = ["v1", "v3", "v4", "v5"]
+        accepted_versions = ["v1", "v3", "v4", "v5", "v7"]
         args = None
         v = "v4"
         name = "python.org"
@@ -55,6 +56,8 @@ class KeywordQueryEventListener(EventListener):
         elif v == "v5":
             generated_uuids.append(["UUID v5 DNS", str(uuid.uuid5(uuid.NAMESPACE_DNS, name))])
             generated_uuids.append(["UUID v5 URL", str(uuid.uuid5(uuid.NAMESPACE_URL, name))])
+        elif v == "v7":
+            generated_uuids.append(["UUID v7", uuid7str()])
 
         for desc, uuid_value in generated_uuids:
             items.append(ExtensionResultItem(icon='images/icon.png',
